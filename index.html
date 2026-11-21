@@ -264,8 +264,7 @@ window.addEventListener('keydown',e=>{
 window.addEventListener('keyup',e=>keys[e.key]=false);
 function hold(id,val){let el=document.getElementById(id);el.addEventListener('pointerdown',e=>{e.preventDefault();move=val});['pointerup','pointerleave','pointercancel'].forEach(ev=>el.addEventListener(ev,()=>{if(move===val)move=0}))}
 hold('left',-1);hold('right',1);document.getElementById('shoot').addEventListener('pointerdown',e=>{e.preventDefault();fire()});
-c.addEventListener('pointermove',e=>{if(running&&e.pointerType==='touch'){let r=c.getBoundingClientRect();player.x=e.clientX-r.left}});
-c.addEventListener('pointerdown',e=>{if(running&&e.pointerType==='touch'){let r=c.getBoundingClientRect();player.x=e.clientX-r.left}});
+
 })();
 </script>
 </body></html>
